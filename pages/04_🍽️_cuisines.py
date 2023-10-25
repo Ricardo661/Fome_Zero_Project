@@ -244,9 +244,9 @@ with st.container():
                      'cuisines_number': 'TIPO DE CULINÁRIA',
                      'average_cost_for_two': 'VALOR MÉDIO PARA DUAS PESSOAS',
                      'aggregate_rating': 'NOTA MÉDIA',
-                     'votes': 'QTD DE AVALIAÇÕES FEITAS'
-                 }
-    )
+                     'votes': 'QTD DE AVALIAÇÕES FEITAS'})
+                 
+    
     
 with st.container():
     col1,col2 = st.columns(2)
