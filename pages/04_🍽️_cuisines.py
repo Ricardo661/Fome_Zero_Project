@@ -234,19 +234,13 @@ with st.container():
     cols = ['restaurant_id', 'restaurant_name', 'country', 'city', 'cuisines_number', 'average_cost_for_two', 'aggregate_rating', 'votes']
 
     aux = df1.loc[:, cols].sort_values(['aggregate_rating', 'restaurant_id'], ascending=[False, True]).reset_index()
-    st.dataframe(aux,
-                 columns={
-                     'restaurant_id': st.dataframe.NumberColumn('ID RESTAURANTE', format='%d'),
-                     'restaurant_name': 'RESTAURANTE',
-                     'country': 'PAÍS',
-                     'city': 'CIDADE',
-                     'cuisines_number': 'TIPO DE CULINÁRIA',
-                     'average_cost_for_two': st.dataframe.NumberColumn('VALOR MÉDIO PARA DUAS PESSOAS', format='%d'),
-                     'aggregate_rating': 'NOTA MÉDIA',
-                     'votes': st.dataframe.NumberColumn('QTD DE AVALIAÇÕES FEITAS', format='%d')
-                 },
-                 hide_index=False,
-                 column_order=('restaurant_id', 'restaurant_name', 'country', 'city', 'cuisines_number', 'average_cost_for_two', 'aggregate_rating', 'votes'))
+
+    # Formate as colunas do DataFrame aux
+    aux['average_cost_for_two'] = aux['average_cost_for_two'].apply(lambda x: f'{x:,.2f}')
+    aux['votes'] = aux['votes'].apply(lambda x: f'{x:,}')
+
+    # Exiba o DataFrame formatado
+    st.dataframe(aux, hide_index=False)
                  
     
     
