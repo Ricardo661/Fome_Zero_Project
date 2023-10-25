@@ -180,7 +180,7 @@ with st.container():
         aux = df2.loc[:, 'city'].nunique()
         col3.metric('Cidades Cadastrados', aux)
     with col4:
-        #locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+        locale.setlocale(locale.LC_ALL, 'pt_BR')
         aux = df2.loc[:, 'votes'].sum()
         formatted_aux = locale.format('%0.2f', aux, grouping=True)
         col4.metric('Avaliações feitas na Plataforma', formatted_aux)
