@@ -240,7 +240,7 @@ with st.container():
     aux['votes'] = aux['votes'].apply(lambda x: f'{x:,}')
 
     # Exiba o DataFrame formatado
-    st.dataframe(aux, hide_index=False)
+    st.dataframe(aux)
                  
     
     
