@@ -237,14 +237,16 @@ with st.container():
     st.dataframe(aux,
                  hide_index=False,
                  columns={
-                     'restaurant_id': 'ID RESTAURANTE',
+                     'restaurant_id': st.dataframe.NumberColumn('ID RESTAURANTE', format='%d'),
                      'restaurant_name': 'RESTAURANTE',
                      'country': 'PAÍS',
                      'city': 'CIDADE',
                      'cuisines_number': 'TIPO DE CULINÁRIA',
-                     'average_cost_for_two': 'VALOR MÉDIO PARA DUAS PESSOAS',
+                     'average_cost_for_two': st.dataframe.NumberColumn('VALOR MÉDIO PARA DUAS PESSOAS', format='%d'),
                      'aggregate_rating': 'NOTA MÉDIA',
-                     'votes': 'QTD DE AVALIAÇÕES FEITAS'})
+                     'votes': st.dataframe.NumberColumn('QTD DE AVALIAÇÕES FEITAS', format='%d')
+                 },
+                 column_order=('restaurant_id', 'restaurant_name', 'country', 'city', 'cuisines_number', 'average_cost_for_two', 'aggregate_rating', 'votes'))
                  
     
     
