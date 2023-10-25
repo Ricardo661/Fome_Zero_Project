@@ -242,9 +242,9 @@ with st.container():
                      'country': 'PAÍS',
                      'city': 'CIDADE',
                      'cuisines_number': 'TIPO_DECULINÁRIA',
-                     'average_cost_for_two': st.column_config.NumberColumn("VALOR MÉDIO PARA DUAS PESSOAS", format='%d'),
+                     'average_cost_for_two': st.column_config.NumberColumn('VALOR MÉDIO PARA DUAS PESSOAS', format='%d'),
                      'aggregate_rating': 'NOTA MÉDIA',
-                     'votes': st.column_config.NumberColumn("QTD DE AVALIAÇÕES FEITAS", format='%d')
+                     'votes': st.column_config.NumberColumn('QTD DE AVALIAÇÕES FEITAS', format='%d')
                  },
                  column_order=('restaurant_id', 'restaurant_name', 'country', 'city', 'cuisines_number', 'average_cost_for_two', 'aggregate_rating', 'votes'))
     
