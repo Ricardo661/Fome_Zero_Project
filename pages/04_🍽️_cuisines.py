@@ -228,20 +228,20 @@ with st.container():
         help_aux = f'País: {aux1.iloc[0,1]}\n\nCidade: {aux1.iloc[4,2]}\n\nMédia Prato para dois: {aux1.iloc[0,10]}' 
         col5.metric(aux2, aux3 , help= help_aux)
 
-with st.container():
-    st.header (f'Top {restaurants} Restaurantes')
-    cols = ['restaurant_id', 'restaurant_name', 'country', 'city', 'cuisines_number','average_cost_for_two','aggregate_rating','votes']
+#with st.container():
+#    st.header (f'Top {restaurants} Restaurantes')
+#    cols = ['restaurant_id', 'restaurant_name', 'country', 'city', 'cuisines_number','average_cost_for_two','aggregate_rating','votes']
 
-    aux = df1.loc[:, cols].sort_values(['aggregate_rating','restaurant_id'], ascending=[False, True]).reset_index()
-    st.dataframe(aux, hide_index = False,column_config={'restaurant_id' : st.column_config.NumberColumn("ID RESTAURANTE"),
-                                   'restaurant_name':'RESTAURANTE', 
-                                   'country':'PAÍS',
-                                   'city':'CIDADE',
-                                   'cuisines_number':'TIPO DE CULINÁRIA',
-                                   'average_cost_for_two':st.column_config.NumberColumn("VALOR MÉDIO PARA DUAS PESSOAS", format = '%d'),
-                                   'aggregate_rating':'NOTA MÉDIA',
-                                   'votes':st.column_config.NumberColumn("QTD DE AVALIÇÕES FEITAS", format = '%d')},
-                column_order=('restaurant_id','restaurant_name','country','city','cuisines_number','average_cost_for_two','aggregate_rating','votes'))
+#    aux = df1.loc[:, cols].sort_values(['aggregate_rating','restaurant_id'], ascending=[False, True]).reset_index()
+#    st.dataframe(aux, hide_index = False,column_config={'restaurant_id' : st.column_config.NumberColumn("ID RESTAURANTE", format = '%d'),
+#                                   'restaurant_name':'RESTAURANTE', 
+#                                   'country':'PAÍS',
+#                                   'city':'CIDADE',
+#                                   'cuisines_number':'TIPO DE CULINÁRIA',
+#                                   'average_cost_for_two':st.column_config.NumberColumn("VALOR MÉDIO PARA DUAS PESSOAS", format = '%d'),
+#                                   'aggregate_rating':'NOTA MÉDIA',
+#                                   'votes':st.column_config.NumberColumn("QTD DE AVALIÇÕES FEITAS", format = '%d')},
+#                column_order=('restaurant_id','restaurant_name','country','city','cuisines_number','average_cost_for_two','aggregate_rating','votes'))
     
 with st.container():
     col1,col2 = st.columns(2)
