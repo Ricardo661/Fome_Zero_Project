@@ -5,6 +5,7 @@ import streamlit as st
 import plotly.express as px
 from streamlit_folium import folium_static
 from PIL import Image
+import plotly.graph_objects as go
 
 #importando o arquivo para o computador
 df = pd.read_csv('dataset/zomato.csv')
