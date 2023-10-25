@@ -148,7 +148,7 @@ df1 = df1.loc[countries,:]
 st.sidebar.markdown("""---""")
 st.sidebar.markdown("### Base de Dados")
 
-processed_data = pd.read_csv('C:/Users/Ricardo Junior/Documents/repos/FTC_programacao_python/PA/dataset/zomato.csv')
+processed_data = pd.read_csv('dataset/zomato.csv')
 st.sidebar.download_button(
         label="Download",
         data=processed_data.to_csv(index=False, sep=";"),
