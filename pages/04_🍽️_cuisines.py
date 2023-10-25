@@ -235,14 +235,14 @@ with st.container():
     aux = df1.loc[:, cols].sort_values(['aggregate_rating','restaurant_id'], ascending=[False, True]).reset_index()
     st.dataframe(aux, 
                  hide_index = False, 
-                 column_config={'restaurant_id' : st.column_config.NumberColumn("ID RESTAURANTE", format = '%d' ),
+                 column_config={'restaurant_id' : st.column_config.NumberColumn("ID RESTAURANTE", format = None ),
                                 'restaurant_name':'RESTAURANTE',
                                 'country':'PAÍS',
                                 'city':'CIDADE',
                                 'cuisines_number':'TIPO DE CULINÁRIA',
-                                'average_cost_for_two':st.column_config.NumberColumn("VALOR MÉDIO PARA DUAS PESSOAS", format = '%d'),
+                                'average_cost_for_two':st.column_config.NumberColumn("VALOR MÉDIO PARA DUAS PESSOAS", format = None),
                                 'aggregate_rating':'NOTA MÉDIA',
-                                'votes':st.column_config.NumberColumn("QTD DE AVALIÇÕES FEITAS", format = '%d')},
+                                'votes':st.column_config.NumberColumn("QTD DE AVALIÇÕES FEITAS", format = None)},
                  column_order=('restaurant_id','restaurant_name','country','city','cuisines_number','average_cost_for_two','aggregate_rating','votes'))
     
 with st.container():
