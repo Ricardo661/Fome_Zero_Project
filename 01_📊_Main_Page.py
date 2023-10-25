@@ -11,7 +11,7 @@ import locale
 
 
 #importando o arquivo para o computador
-df = pd.read_csv('C:/Users/Ricardo Junior/Documents/repos/FTC_programacao_python/PA/dataset/zomato.csv')
+df = pd.read_csv('dataset/zomato.csv')
 #criando copia do dataframe
 df1 = df.copy()
 
@@ -127,8 +127,7 @@ st.set_page_config(
 # Barra Lateral
 #=========================================================
 
-image_path ='C:/Users/Ricardo Junior/Documents/repos/FTC_programacao_python/PA/logo.png'
-image= Image.open(image_path)
+image= Image.open('logo.png')
 #st.sidebar.image (image, width=160, use_column_width="auto")
 col1, col2 = st.sidebar.columns([2, 5], gap="small")
 col1.image(image, width=35, use_column_width="auto")
