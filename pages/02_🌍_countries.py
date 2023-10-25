@@ -7,7 +7,7 @@ from streamlit_folium import folium_static
 from PIL import Image
 
 #importando o arquivo para o computador
-df = pd.read_csv('C:/Users/Ricardo Junior/Documents/repos/FTC_programacao_python/PA/dataset/zomato.csv')
+df = pd.read_csv('dataset/zomato.csv')
 #criando copia do dataframe
 df1 = df.copy()
 
