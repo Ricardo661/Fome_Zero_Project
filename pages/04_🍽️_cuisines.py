@@ -233,15 +233,7 @@ with st.container():
     cols = ['restaurant_id', 'restaurant_name', 'country', 'city', 'cuisines_number','average_cost_for_two','aggregate_rating','votes']
 
     aux = df1.loc[:, cols].sort_values(['aggregate_rating','restaurant_id'], ascending=[False, True]).reset_index()
-    st.dataframe(aux, hide_index = True,column_config={'restaurant_id' : 'ID RESTAURANTE',
-                                                        'restaurant_name':'RESTAURANTE',
-                                                        'country':'PAÍS',
-                                                        'city':'CIDADE',
-                                                        'cuisines_number':'TIPO DE CULINÁRIA',
-                                                        'average_cost_for_two': 'VALOR MÉDIO PARA DUAS PESSOAS',
-                                                        'aggregate_rating':'NOTA MÉDIA',
-                                                        'votes':'QTD DE AVALIÇÕES FEITAS'},
-                 column_order=('restaurant_id','restaurant_name','country','city','cuisines_number','average_cost_for_two','aggregate_rating','votes'))
+    st.dataframe(aux)
     
 with st.container():
     col1,col2 = st.columns(2)
