@@ -1,7 +1,5 @@
-# fome_zero
-# Problema de negócio
-
-## **Contexto do Problema de Negócio**
+# Fome Zero
+## **1 - Contexto do Problema de Negócio**
 
 Parabéns! Você acaba de ser contratado como Cientista de Dados da empresa Fome Zero, e a sua principal tarefa nesse momento é ajudar o CEO Kleiton Guerra a identificar pontos chaves da empresa, respondendo às perguntas que ele fizer utilizando dados!
 A empresa Fome Zero é uma marketplace de restaurantes. Ou seja, seu core business é facilitar o encontro e negociações de clientes e  restaurantes. Os restaurantes fazem o cadastro dentro da plataforma da Fome Zero, que disponibiliza informações como endereço, tipo de culinária servida, se possui reservas, se faz entregas e também uma nota de avaliação dos serviços e produtos do restaurante, dentre outras informações.
@@ -103,13 +101,13 @@ online e fazem entregas?
 O CEO também pediu que fosse gerado um dashboard que permitisse que ele visualizasse as principais informações das perguntas que ele fez. O CEO precisa dessas informações o mais rápido possível, uma vez que ele também é novo na empresa e irá utilizá-las para entender melhor a empresa Fome Zero para conseguir tomar decisões mais assertivas.
 Seu trabalho é utilizar os dados que a empresa Fome Zero possui e responder as perguntas feitas do CEO e criar o dashboard solicitado.
 
-# Premissas do negócio
+# 2 - Premissas do negócio
 
 1. A análise foi realizada com toda a base de dados do Fome Zero.
 2. Marketplace foi o modelo de negócio assumido.
 3. As 5 visões do negócio foram: Visão Geral, Visão País, Visão Cidades, Visão Restaurantes e Visão Tipos de Culinária. 
 
-# Estratégia da solução
+# 3 - Estratégia da solução
 
 O painel estratégico foi desenvolvido utilizando as métricas que
 refletem as 5 visões do modelo de negócio da empresa de uma forma a condensa as informações em 4 Visões, sendo elas:
@@ -144,20 +142,20 @@ Cada visão é representada pelo seguinte conjunto de métricas.
     3. Melhores tipos Culinários
     4. Piores tipos Culinários
 
-# O produto final do projeto
+# 4 - O produto final do projeto
 
 Painel online, hospedado em um Cloud e disponível para acesso em
 qualquer dispositivo conectado à internet.
 O painel pode ser acessado através desse link: https://ricardo661-projetcs-fome-zero.streamlit.app/
 
-# Conclusão
+# 5 - Conclusão
 
 O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas
 que exibam essas métricas da melhor forma possível para o CEO.
 
 O maior numero de restaurantes registrados fica no País Índia
 
-# Próximo passos
+# 6 - Próximo passos
 
 1. Reduzir o número de métricas.
 2. Criar novos filtros.
